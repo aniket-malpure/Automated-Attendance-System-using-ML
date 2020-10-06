@@ -1,0 +1,31 @@
+OS.walk() generate the file names in a directory tree by walking the tree either top-down or bottom-up. For each directory in the tree rooted at directory top (including top itself), it yields a 3-tuple (dirpath, dirnames, filenames).
+dirpath : dirpath is a string, the path to the directory. 
+dirnames : dirnames is a list of the names of the subdirectories in dirpath (excluding '.' and '..'). 
+filenames : filenames is a list of the names of the non-directory files in dirpath.
+
+
+If you want to replace a string that matches a regular expression instead of perfect match, use the sub() of the re module.
+In re.sub(), specify a regular expression pattern in the first argument, a new string in the second argument, and a string to be processed in the third argument.
+import re
+s = 'aaa@xxx.com bbb@yyy.com ccc@zzz.com'
+print(re.sub('[a-z]*@', 'ABC@', s))
+# ABC@xxx.com ABC@yyy.com ABC@zzz.com
+
+
+face_recognition.api.face_encodings(face_image, known_face_locations=None, num_jitters=1, model='small')
+Given an image, return the 128-dimension face encoding for each face in the image.
+Parameters:	
+face_image – The image that contains one or more faces
+known_face_locations – Optional - the bounding boxes of each face if you already know them.
+num_jitters – How many times to re-sample the face when calculating encoding. Higher is more accurate, but slower (i.e. 100 is 100x slower)
+model – Optional - which model to use. “large” or “small” (default) which only returns 5 points but is faster.
+Returns:	
+A list of 128-dimensional face encodings (one for each face in the image)
+
+numpy.argmin(a, axis=None, out=None)[source]
+Returns the indices of the minimum values along an axis.
+Parameters
+a=array_like. Input array.
+axis(int), optional. By default, the index is into the flattened array, otherwise along the specified axis.
+out(array), optional. If provided, the result will be inserted into this array. It should be of the appropriate shape and dtype.
+Returns index_array and array of ints. Array of indices into the array. It has the same shape as a.shape with the dimension along a
