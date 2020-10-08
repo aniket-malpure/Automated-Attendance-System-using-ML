@@ -22,6 +22,7 @@ model – Optional - which model to use. “large” or “small” (default) wh
 Returns:	
 A list of 128-dimensional face encodings (one for each face in the image)
 
+
 numpy.argmin(a, axis=None, out=None)[source]
 Returns the indices of the minimum values along an axis.
 Parameters
@@ -29,3 +30,18 @@ a=array_like. Input array.
 axis(int), optional. By default, the index is into the flattened array, otherwise along the specified axis.
 out(array), optional. If provided, the result will be inserted into this array. It should be of the appropriate shape and dtype.
 Returns index_array and array of ints. Array of indices into the array. It has the same shape as a.shape with the dimension along a
+
+
+requests.post(url, data={key: value}, json={key: value}, args)
+url - Required. The url of the request
+json - Optional. A JSON object to send to the specified url
+
+
+status_code returns a number that indicates the status (200 is OK, 404 is Not Found). Python requests are generally used to fetch the content from a particular resource URI.
+
+
+The zip() function returns a zip object, which is an iterator of tuples where the first item in each passed iterator is paired together, and then the second item in each passed iterator are paired together etc.
+If the passed iterators have different lengths, the iterator with the least items decides the length of the new iterator.
+a = ("John", "Charles", "Mike")
+b = ("Jenny", "Christy")
+x = zip(a, b)(('John', 'Jenny'), ('Charles', 'Christy'))
